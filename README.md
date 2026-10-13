@@ -14,10 +14,13 @@ company `scss` file for design modifications.
 with some small modifications for SDSC.**
 
 - **See the
-  [demo presentation here](https://sdsc-ordes.github.io/technical-presentation/gh-pages/demo)**.
+  [demo presentation here](https://gabyx.github.io/technical-presentation-sdsc/gh-pages/demo)**.
 - **See some other
-  [Rust Workshop](https://sdsc-ordes.github.io/technical-presentation/gh-pages/rust-workshop/part-1/#/title-slide)**
-  [src](https://github.com/sdsc-ordes/technical-presentation/tree/feat/rust-workshop).
+  [Rust Workshop](https://gabyx.github.io/technical-presentation-sdsc/gh-pages/rust-workshop/part-1/#/title-slide)**
+  [src](https://github.com/gabyx/technical-presentation-sdsc/tree/feat/rust-workshop).
+- **See some other
+  [Nix Workshop](https://gabyx.github.io/technical-presentation-sdsc/gh-pages/nix-workshop/part-1/#/title-slide)**
+  [src](https://github.com/gabyx/technical-presentation-sdsc/tree/feat/nix-workshop).
 - **See some other
   [C++ presentation here](https://gabyx.github.io/tech-pr-cpp-value-catergories)**
   [src](https://github.com/gabyx/tech-pr-cpp-value-catergories).
