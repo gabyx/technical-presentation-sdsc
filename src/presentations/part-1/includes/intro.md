@@ -3,21 +3,21 @@
 # Requirements
 
 All examples refer to the
-[workshop repository](https://github.com/sdsc-ordes/nix-workshop) in the root
+[workshop repository](https://github.com/gabyx/nix-workshop) in the root
 directory.
 
 ::::::{.columns}
 
 :::{.column width="50%" style="text-align:center;"}
 
-[Workshop Repository](https://github.com/sdsc-ordes/nix-workshop)<br>
+[Workshop Repository](https://github.com/gabyx/nix-workshop)<br>
 ![](${meta:include-base-dir}/assets/images/qr-tag-repo.svg){height="8em"}
 
 :::
 
 :::{.column width="50%" style="text-align:center;"}
 
-[Slides](https://sdsc-ordes.github.io/technical-presentation/gh-pages/nix-workshop/part-1)<br>
+[Slides](https://gabyx.github.io/technical-presentation/gh-pages/nix-workshop/part-1)<br>
 ![](${meta:include-base-dir}/assets/images/qr-tag-slides.svg){height="8em"}
 
 :::
@@ -25,7 +25,7 @@ directory.
 ::::::
 
 Ensure that you
-[have the requirements fulfilled](https://github.com/sdsc-ordes/nix-workshop#requirements).
+[have the requirements fulfilled](https://github.com/gabyx/nix-workshop#requirements).
 
 # Motivation
 
@@ -643,7 +643,7 @@ cmdoret: takeover.
 ## Building Our First Package (1) {#building-package}
 
 Put the following in a script
-[`whats-is-my-ip.nix`](https://github.com/sdsc-ordes/nix-workshop/blob/main/examples/what-is-my-ip.nix):
+[`whats-is-my-ip.nix`](https://github.com/gabyx/nix-workshop/blob/main/examples/what-is-my-ip.nix):
 
 ```nix {line-numbers="2|4-6|8-9|11|13-16" style="font-size:14pt"}
 let
@@ -913,7 +913,7 @@ A flake `flake.nix`:
 
 - Nix evaluates a `flake.nix` by calling the `outputs` with `inputs`.
   - Try `nix repl` and `:lf .` to load the
-    [`./flake.nix`](https://github.com/sdsc-ordes/nix-workshop/blob/main/flake.nix)
+    [`./flake.nix`](https://github.com/gabyx/nix-workshop/blob/main/flake.nix)
     in directory `.`.
 
   - Check `outputs.packages.x86_64-linux = { ... }`.
@@ -997,7 +997,7 @@ flowchart LR
 ## Build A Derivation
 
 Build the
-[example derivation](https://github.com/sdsc-ordes/nix-workshop/blob/main/examples/flake-simple/pkgs/default.nix) -
+[example derivation](https://github.com/gabyx/nix-workshop/blob/main/examples/flake-simple/pkgs/default.nix) -
 eval. & realize it in the Nix store:
 
 ```bash
@@ -1060,8 +1060,8 @@ You can also specify `github` repositories and nested flakes and build/run
 derivations on them:
 
 ```bash
-nix build -L "github:sdsc-ordes/nix-workshop?dir=examples/flake-simple#mytool"
-nix run "github:sdsc-ordes/nix-workshop?dir=examples/flake-simple#mytool"
+nix build -L "github:gabyx/nix-workshop?dir=examples/flake-simple#mytool"
+nix run "github:gabyx/nix-workshop?dir=examples/flake-simple#mytool"
 ```
 
 # Nix Development Shells
@@ -1097,7 +1097,7 @@ The `banana-shell` derivation is meant to be consumed by `nix develop`.
 ## Create A DevShell
 
 The flake in
-[`./examples/flake-simple`](https://github.com/sdsc-ordes/nix-workshop/blob/main/examples/flake-simple/flake.nix)
+[`./examples/flake-simple`](https://github.com/gabyx/nix-workshop/blob/main/examples/flake-simple/flake.nix)
 defines `devShells` an output:
 
 ```nix {line-numbers="2|3-12|4|5|7-10"}
@@ -1121,7 +1121,7 @@ devShells.x86_64-linux =
 Function `pkgs.mkShell` makes a derivation consumable by `nix develop`:
 
 ```bash {style="font-size:14pt"}
-nix develop "github:sdsc-ordes/nix-workshop?dir=examples/flake-simple#default" --command zsh
+nix develop "github:gabyx/nix-workshop?dir=examples/flake-simple#default" --command zsh
 ```
 
 :::
@@ -1175,7 +1175,7 @@ Time to get 🫵r fingers dirty with the following exercises:
 ::::::
 
 Follow the steps in
-[`examples/flake-go/README.md`](https://github.com/sdsc-ordes/nix-workshop/tree/main/examples/flake-go/README.md).
+[`examples/flake-go/README.md`](https://github.com/gabyx/nix-workshop/tree/main/examples/flake-go/README.md).
 
 # Outlook
 
@@ -1197,13 +1197,13 @@ Follow the steps in
 ## Goodies 🍬 from SDSC
 
 We maintain _well-structured_, _state-of-the-art_, _`nix`-enabled_
-[**repository templates**](https://github.com/sdsc-ordes/repository-templates)
-for toolchains like:
+[**repository templates**](https://github.com/gabyx/repository-templates) for
+toolchains like:
 
-- [Rust](https://github.com/sdsc-ordes/repository-template#rust-template)
-- [Go](https://github.com/sdsc-ordes/repository-template#go-template)
-- [Python](https://github.com/sdsc-ordes/repository-template#python-template)
-- [Generic](https://github.com/sdsc-ordes/repository-template#generic-template)
+- [Rust](https://github.com/gabyx/repository-template#rust-template)
+- [Go](https://github.com/gabyx/repository-template#go-template)
+- [Python](https://github.com/gabyx/repository-template#python-template)
+- [Generic](https://github.com/gabyx/repository-template#generic-template)
 - etc.
 
 **The templates provide CI out of the box and are ready to use!**
@@ -1269,7 +1269,7 @@ Solutions in the [notes](#help).
 ## Inspect the Dependency Graph
 
 - Reproduce the commands for building `what-is-my-ip.nix` on your machine in the
-  [workshop repository](https://github.com/sdsc-ordes/nix-workshop).
+  [workshop repository](https://github.com/gabyx/nix-workshop).
 - Inspect the store path.
 - Explore the dependencies and answer the quiz below:
 
@@ -1295,21 +1295,20 @@ commands before.
 ## Inspect a Flake
 
 - Load the `flake` in the
-  [the root directory](https://github.com/sdsc-ordes/nix-workshop/blob/main) in
+  [the root directory](https://github.com/gabyx/nix-workshop/blob/main) in
   `nix repl` and use `:lf .`
   - Inspect the attribute `inputs.nixpkgs`.
   - Inspect the string `"${inputs.nixpkgs}"` and explore the output!
   - Try to explain `import "${inputs.nixpkgs}" { system = "x86_64-linux"; }`.
 
 - Eval/build/run the `treefmt` utility in the `packages` output in the flake
-  inside
-  [the root directory](https://github.com/sdsc-ordes/nix-workshop/blob/main).
+  inside [the root directory](https://github.com/gabyx/nix-workshop/blob/main).
 
   Hints:
   - `nix eval --impure --expr 'builtins.currentSystem'`
   - `packages.${system}.treefmt`
   - `nix run`
-  - `"github:sdsc-ordes/nix-workshop#..."`
+  - `"github:gabyx/nix-workshop#..."`
 
 **Time: 15-20min**
 
@@ -1317,8 +1316,8 @@ commands before.
 
 **Solutions**:
 
-Do `nix repl` and load `:lf github:sdsc-ordes/nix-workshop#treefmt` or (`:lf .`
-if you have a local clone). Inspecting the `inputs.nixpkgs` gives you something
+Do `nix repl` and load `:lf github:gabyx/nix-workshop#treefmt` or (`:lf .` if
+you have a local clone). Inspecting the `inputs.nixpkgs` gives you something
 like this which is a attribute set representing a `flake`:
 
 ```json
@@ -1379,7 +1378,7 @@ Evaluating the `treefmt` utility in the `packages` output in the flake is giving
 you the build instruction (the derivation).
 
 ```bash
-nix eval "github:sdsc-ordes/nix-workshop#treefmt#treefmt"
+nix eval "github:gabyx/nix-workshop#treefmt#treefmt"
 > «derivation /nix/store/72zknv2ssr8pkvf5jrc0g5w64bqjvyq1-treefmt.drv»
 ```
 
@@ -1389,8 +1388,8 @@ Building and running `treefmt` can be done with
 nix build ".#treefmt"
 nix run ".#treefmt"
 # or by doing it without a clone.
-nix build "github:sdsc-ordes/nix-workshop#treefmt"
-nix run "github:sdsc-ordes/nix-workshop#treefmt"
+nix build "github:gabyx/nix-workshop#treefmt"
+nix run "github:gabyx/nix-workshop#treefmt"
 ```
 
 By the way: I consider `treefmt` the **ultimate gold standard** of formatting
@@ -1403,7 +1402,7 @@ tools. [Check it out here.](https://github.com/numtide/treefmt-nix)
 ## Modify the DevShell
 
 - Modify
-  [`./examples/flake-simple`](https://github.com/sdsc-ordes/nix-workshop/blob/main/examples/flake-simple/flake.nix)
+  [`./examples/flake-simple`](https://github.com/gabyx/nix-workshop/blob/main/examples/flake-simple/flake.nix)
   to include your
   [package from `nixpkgs`](https://search.nixos.org/packages?channel=unstable).
 
@@ -1513,7 +1512,7 @@ Used in `pkgs.callPackage` in `nixpkgs`.
 ### The builtin function `derivation`
 
 This is what `pkgs.writeShellScriptBin` would expand to: (see
-[./examples/what-is-my-ip-orig.nix](https://github.com/sdsc-ordes/nix-workshop/blob/main/examples/what-is-my-ip-orig.nix)):
+[./examples/what-is-my-ip-orig.nix](https://github.com/gabyx/nix-workshop/blob/main/examples/what-is-my-ip-orig.nix)):
 
 ```nix {line-numbers="1|2|4|5|7-20|10|12-16|22,10" style="font-size:12pt;"}
 derivation {
